@@ -4,10 +4,17 @@
 
 let amigos = [];
 
+let input = document.getElementById("valorUsuario");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    agregarAmigo();
+  }
+});
+
 function agregarAmigo() {
     let valorDeUsuario = document.getElementById('valorUsuario').value;
     if (valorDeUsuario == '') {
-       alert('Por favor, inserte un nombre');
+       alert('Por favor, inserte un nombre.');
     } else {
         document.getElementById('valorUsuario').value = '';
         amigos.push(valorDeUsuario);
@@ -26,7 +33,7 @@ function listaAmigos() {
 function sortearAmigo() {
     let indiceAleatorio = 0;
     if (amigos == ''){
-        alert('Inserte un nombre');
+        alert('No existe ningún nombre registrado.');
     } else {
         document.getElementById('listaAmigos').innerHTML = "";
         indiceAleatorio = Math.floor(Math.random()* amigos.length);
