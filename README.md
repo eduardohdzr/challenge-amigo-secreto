@@ -24,24 +24,30 @@ El proyecto consiste en una aplicación que permite a los usuarios ingresar nomb
 
 
 ## **3. Estado del proyecto**
-:white_check_mark: Versión 1.
-
-:construction:Version 2. En desarrollo.
+:white_check_mark: Version 2.
 
 ## **4. Características**
-:white_check_mark: Versión 1.
+:heavy_minus_sign: Versión 1.
 - `Cuadro de texto:` Permite ingresar los nombres de amigos.
 - `Botón "añadir" :` Permite agregar los nombres en una lista.
 - `Botón "sortear":` Permite realizar el sorteo aleatorio para determinar al amigo secreto.
 - `Resultado:` Indica el nombre del amigo secreto.
 - `Ventana emergente:` En caso de ingresar un nombre vacío o realizar el sorteo sin un nombre, aparecerá un mensaje indicando que es necesario ingresar un nombre válido.
 
-:construction:Version 2.
+:white_check_mark: Version 2.
+- `Añadir:` Se incluye la opción de agregar nombres presionando la tecla `Enter`.
+- `Botón sortear:` Inicia deshabilitado. Se habilita al agregar un nombre.
+- `Volver a jugar:` Se añade la posibilidad de volver a jugar.
 
 ## **5. Demostración y acceso al proyecto**
 Se puede acceder a la aplicación a través del siguiente [enlace](https://eduardohdzr.github.io/challenge-amigo-secreto/).
 
-![demo](https://github.com/user-attachments/assets/e357c2e8-39a9-46a7-aa77-4a851a49e180)
+### Versión 1
+![demo](https://github.com/user-attachments/assets/eb63912f-d421-4f15-904c-984dd5450a9d)
+
+### Versión 2
+![demo-2](https://github.com/user-attachments/assets/ad44f847-13f7-410c-ba9b-3c9fd08e6ef2)
+
 
 ## **6. Tecnologías utilizadas**
 
