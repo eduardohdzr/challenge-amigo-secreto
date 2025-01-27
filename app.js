@@ -3,6 +3,7 @@
 // Aquí deberás desarrollar la lógica para resolver el problema.
 
 let amigos = [];
+let final = false;
 
 let input = document.getElementById("valorUsuario");
 input.addEventListener("keypress", function(event) {
@@ -19,6 +20,7 @@ function agregarAmigo() {
         document.getElementById('valorUsuario').value = '';
         amigos.push(valorDeUsuario);
         listaAmigos();
+        document.getElementById('botonSortear').removeAttribute('disabled');
     }
 }
 
@@ -31,13 +33,37 @@ function listaAmigos() {
     return lista.innerHTML += nuevaLista;
 }
 function sortearAmigo() {
-    let indiceAleatorio = 0;
-    if (amigos == ''){
-        alert('No existe ningún nombre registrado.');
+    
+    if (final == true){
+        document.getElementById('botonAgregar').removeAttribute('disabled');
+        condicionesIniciales();
+        console.log(' final' + final);
+        final = false;
     } else {
-        document.getElementById('listaAmigos').innerHTML = "";
+        let indiceAleatorio = 0;
+        asignarTextoElemento('listaAmigos', '');
         indiceAleatorio = Math.floor(Math.random()* amigos.length);
-        let resultado = document.getElementById('resultado');
-        resultado.innerHTML = `El amigo secreto es ${amigos[indiceAleatorio]}`;
-    } return;
+        asignarTextoElemento('titulo',`El amigo secreto es: ${amigos[indiceAleatorio]}`);
+        asignarTextoElemento('resultado', 'Para volver a jugar, pulsa nuevamente el botón.');
+        document.getElementById('botonAgregar').setAttribute('disabled', true);
+        final = true;
+    }
+    console.log(final);
+    return;
 }
+
+
+function condicionesIniciales(){
+    amigos = [];
+    asignarTextoElemento('titulo', 'Digite el nombre de sus amigos');
+    document.getElementById('botonSortear').setAttribute('disabled', true);
+    asignarTextoElemento('resultado', '');
+}
+function asignarTextoElemento(elemento, texto){
+    let elementoHTML = document.getElementById(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+condicionesIniciales();
+
+cssr

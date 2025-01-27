@@ -1,7 +1,9 @@
 :root {
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary: #59f929;
+/*  --color-tertiary: #c4c4c4;
+    --color-tertiary: #eeb538; */
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -118,11 +120,13 @@ button {
 .button-add {
     background-color: var(--color-tertiary);
     color: var(--color-text);
+    /*color: var(--color-text);*/
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #3fcf13;
+/*  background-color: #a1a1a1;*/
 }
 
 /* Listas */
@@ -159,4 +163,11 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-draw:disabled{
+    background-color: #898989;
+}
+.button-add:disabled {
+    background-color: #898989;
 }
